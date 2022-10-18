@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Промежуточный уровень</title>
+		<link rel="stylesheet" href="css/main.css" />
+		<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,700&display=swap&subset=cyrillic-ext" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header>
+            <img src="img/icons8-калькулятор-64 (1).png" alt="logo" class="logo">
+            
+            <nav>
+                <ul class="navLinks">
+                    
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="basic cocomo.html"> Базовый <br>уровень</a></li>
+                    <li><a href="intermediet cocomo.html">Промежуточный <br>уровень</a></li>
+                    <li><a href="Early Design.html">Предварительная<br>оценка</a></li>
+                    <li><a href="Post Architecture.html">Детальная<br>оценка</a></li>         
+                </ul>
+            </nav>
+            <a href="button.html" class="contact"><button>Автор</button></a>
+        </header>
+        <main class="calc-wrapper">
+			<div class="container">
+				<form id="form">
+					<div class="heading">
+						<h1 class="heading-title">Intermediate COCOMO</h1>
+						<p class="heading-desc">На этом уровне базовая модель уточнена за счет ввода дополнительных 15 «атрибутов стоимости» (или факторов затрат).</p>
+					</div>
+
+					<!-- строки кода -->
+				<div class="calc-section">
+					<label class="checkbox-wrapper title-bold section-title .section-title--vertical-center">
+						<span class="title__inline">В проекте:</span>
+						<input type="number" min="0" max="200" value="5" step="0.1" id="square-input" class="title__inline input-short" />
+						<span class="title__inline">тыс. строк кода</span>
+					</label>
+					<input type="range" id="square-range" class="range-input" min="0" max="200" value="5" step="0.1" />
+				</div>
+					<!-- // строки кода -->
+
+					<!-- тип проекта -->
+					<div class="calc-section">
+						<h4 class="checkbox-wrapper title-bold section-title">Тип проекта</h4>
+						<label class="radio-wrapper" data-name="mobile">
+							<input type="radio" class="radio" name="type" value="1" />
+							<div class="title-lite">Распространенный тип
+								<span class="note">характеризуется тем, что проект выполня-ется небольшой группой специалистов, имеющих опыт в создании подобных изделий и опыт применения технологических средств. Условия работы стабильны, и изделие имеет относительно невысокую сложность.</span>
+							</div>
+						</label>
+						<label class="radio-wrapper" data-name="mobile">
+							<input type="radio" class="radio" name="type" value="2" checked />
+							<div class="title-lite">
+								Встроенный тип
+								<span class="note">характеризуется очень жесткими требованиями на программный продукт, интерфейсы, параметры ЭВМ. Как правило, у таких изделий высокая степень новизны и планирование работ осуществляется при недостаточной ин-формации, как о самом изделии, так и об условиях работы. Встроенный проект требует больших затрат на изменения и исправления.</span>
+							</div>
+						</label>
+						<label class="radio-wrapper" data-name="mobile">
+							<input type="radio" class="radio" name="type" value="3" />
+							<div class="title-lite">
+								Полунезависимый тип
+								<span class="note">занимает промежуточное положение между распространенным и встроенным – это проекты средней сложности. Исполнители знакомы лишь с некоторыми характеристиками (или компонентами) создаваемой систе-мы, имеют средний опыт работы с подобными изделиями, изделие имеет элемент новиз-ны. Только часть требований к изделию жестко фиксируется, в остальном разработки имеют степени выбора.</span>
+							</div>
+						</label>
+					</div>
+					<!-- // тип проекта -->
+
+				
+				
+
+				<!-- Требуемая надежность ПО -->
+				<div class="calc-section">
+					<h4 class="checkbox-wrapper title-bold section-title">1. Требуемая надежность ПО</h4>
+					<div class="rooms-wrapper">
+					<label class="rooms-label" data-name="mobile">
+						<input type="radio" class="rooms-radio-real" name="01" value="0.75" />
+						<span class="rooms-radio-fake">Очень низкий</span>
+					</label>
+					<label class="rooms-label" data-name="mobile">
+						<input type="radio" class="rooms-radio-real" name="01" value="0.88"  />
+						<span class="rooms-radio-fake">Низкий</span>
+					</label>
+					<label class="rooms-label" data-name="mobile">
+						<input type="radio" class="rooms-radio-real" name="01" value="1" checked/>
+						<span class="rooms-radio-fake">Средний</span>
+					</label>
+					<label class="rooms-label" data-name="mobile">
+						<input type="radio" class="rooms-radio-real" name="01" value="1.15" />
+						<span class="rooms-radio-fake">Высокий</span>
+					</label>
+					<label class="rooms-label" data-name="mobile">
+						<input type="radio" class="rooms-radio-real" name="01" value="1.40" />
+						<span class="rooms-radio-fake">Очень высокий</span>
+					</label>
+				</div>
+				</div>
+				<!-- // Требуемая надежность ПО -->
+
+				<!-- Размер БД приложения -->
+				<div class="calc-section">
+					<h4 class="checkbox-wrapper title-bold section-title">2. Размер БД приложения</h4>
+					<div class="rooms-wrapper">
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="02" value="0.94" />
+							<span class="rooms-radio-fake">Низкий</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="02" value="1"  checked/>
+							<span class="rooms-radio-fake">Средний</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="02" value="1.08" />
+							<span class="rooms-radio-fake">Высокий</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="02" value="1.16" />
+							<span class="rooms-radio-fake">Очень высокий</span>
+						</label>
+					</div>
+				</div>
+				<!-- // Размер БД приложения -->
+
+				<!-- Сложность продукта -->
+				<div class="calc-section">
+					<h4 class="checkbox-wrapper title-bold section-title">3. Сложность продукта</h4>
+					<div class="rooms-wrapper">
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="03" value="0.70" />
+							<span class="rooms-radio-fake">Очень низкий</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="03" value="0.85" />
+							<span class="rooms-radio-fake">Низкий</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="03" value="1"  checked/>
+							<span class="rooms-radio-fake">Средний</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="03" value="1.15" />
+							<span class="rooms-radio-fake">Высокий</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="03" value="1.30" />
+							<span class="rooms-radio-fake">Очень высокий</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="03" value="1.65" />
+							<span class="rooms-radio-fake">Критический</span>
+						</label>
+					</div>
+				</div>
+				<!-- // Сложность продукта -->
+
+				<!-- Ограничения быстродействия при выполнении программы -->
+				<div class="calc-section">
+					<h4 class="checkbox-wrapper title-bold section-title">4. Ограничения быстродействия при выполнении программы</h4>
+					<div class="rooms-wrapper">
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="04" value="1" checked/>
+							<span class="rooms-radio-fake">Средний</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="04" value="1.11" />
+							<span class="rooms-radio-fake">Высокий</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="04" value="1.30" />
+							<span class="rooms-radio-fake">Очень высокий</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="04" value="1.66" />
+							<span class="rooms-radio-fake">Критический</span>
+						</label>
+					</div>
+				</div>
+				<!-- // Ограничения быстродействия при выполнении программы -->
+
+				<!-- Ограничения памяти -->
+				<div class="calc-section">
+					<h4 class="checkbox-wrapper title-bold section-title">5. Ограничения памяти</h4>
+					<div class="rooms-wrapper">
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="05" value="1"  checked/>
+							<span class="rooms-radio-fake">Средний</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="05" value="1.06" />
+							<span class="rooms-radio-fake">Высокий</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="05" value="1.21" />
+							<span class="rooms-radio-fake">Очень высокий</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="05" value="1.56" />
+							<span class="rooms-radio-fake">Критический</span>
+						</label>
+					</div>
+				</div>
+				<!-- // Ограничения памяти -->
+
+				<!-- Неустойчивость окружения виртуальной машины -->
+				<div class="calc-section">
+					<h4 class="checkbox-wrapper title-bold section-title">6. Неустойчивость окружения виртуальной машины</h4>
+					<div class="rooms-wrapper">
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="06" value="0.87" />
+							<span class="rooms-radio-fake">Низкий</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="06" value="1"  checked/>
+							<span class="rooms-radio-fake">Средний</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="06" value="1.15" />
+							<span class="rooms-radio-fake">Высокий</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="06" value="1.30" />
+							<span class="rooms-radio-fake">Очень высокий</span>
+						</label>
+					</div>
+				</div>
+				<!-- // Неустойчивость окружения виртуальной машины -->
+
+				<!-- Требуемое время восстановления -->
+				<div class="calc-section">
+					<h4 class="checkbox-wrapper title-bold section-title">7. Требуемое время восстановления</h4>
+					<div class="rooms-wrapper">
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="07" value="0.87" />
+							<span class="rooms-radio-fake">Низкий</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="07" value="1"  checked/>
+							<span class="rooms-radio-fake">Средний</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="07" value="1.07" />
+							<span class="rooms-radio-fake">Высокий</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="07" value="1.15" />
+							<span class="rooms-radio-fake">Очень высокий</span>
+						</label>
+					</div>
+				</div>
+				<!-- // Требуемое время восстановления -->
+
+				<!-- Аналитические способности -->
+				<div class="calc-section">
+					<h4 class="checkbox-wrapper title-bold section-title">8. Аналитические способности</h4>
+					<div class="rooms-wrapper">
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="08" value="1.46" />
+							<span class="rooms-radio-fake">Очень низкий</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="08" value="1.19" />
+							<span class="rooms-radio-fake">Низкий</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="08" value="1"  checked/>
+							<span class="rooms-radio-fake">Средний</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="08" value="0.86" />
+							<span class="rooms-radio-fake">Высокий</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="08" value="0.71" />
+							<div class="rooms-radio-fake">Очень высокий</div>
+						</label>
+					</div>
+				</div>
+				<!-- // Аналитические способности -->
+
+				<!-- Опыт разработки -->
+				<div class="calc-section">
+					<h4 class="checkbox-wrapper title-bold section-title">9. Опыт разработки</h4>
+					<div class="rooms-wrapper"></div>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="09" value="1.29" />
+							<span class="rooms-radio-fake">Очень низкий</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="09" value="1.13" />
+							<span class="rooms-radio-fake">Низкий</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="09" value="1"  checked/>
+							<span class="rooms-radio-fake">Средний</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="09" value="0.91" />
+							<span class="rooms-radio-fake">Высокий</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="09" value="0.82" />
+							<span class="rooms-radio-fake">Очень высокий</span>
+						</label>
+					</div>
+				</div>
+				<!-- // Опыт разработки -->
+					
+				<!-- Способности к разработке ПО -->
+				<div class="calc-section">
+					<h4 class="checkbox-wrapper title-bold section-title">10. Способности к разработке ПО</h4>
+					<div class="rooms-wrapper">
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="10" value="1.42" />
+							<span class="rooms-radio-fake">Очень низкий</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="10" value="1.17" />
+							<span class="rooms-radio-fake">Низкий</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="10" value="1"  checked/>
+							<span class="rooms-radio-fake">Средний</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="10" value="0.86" />
+							<span class="rooms-radio-fake">Высокий</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="10" value="0.7" />
+							<span class="rooms-radio-fake">Очень высокий</span>
+						</label>
+					</div>
+				</div>
+				<!-- // Способности к разработке ПО -->
+
+				<!-- Опыт использования виртуальных машин -->
+				<div class="calc-section">
+					<h4 class="checkbox-wrapper title-bold section-title">11. Опыт использования виртуальных машин</h4>
+					<div class="rooms-wrapper">
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="11" value="1.21" />
+							<span class="rooms-radio-fake">Очень низкий</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="11" value="1.1" />
+							<span class="rooms-radio-fake">Низкий</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="11" value="1"  checked/>
+							<span class="rooms-radio-fake">Средний</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="11" value="0.9" />
+							<span class="rooms-radio-fake">Высокий</span>
+						</label>
+					</div>
+				</div>
+				<!-- // Опыт использования виртуальных машин -->
+
+				<!-- Опыт разработки на языках программирования -->
+				<div class="calc-section">
+					<h4 class="checkbox-wrapper title-bold section-title">12. Опыт разработки на языках программирования</h4>
+					<div class="rooms-wrapper">
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="12" value="1.14" />
+							<span class="rooms-radio-fake">Очень низкий</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="12" value="1.07" />
+							<span class="rooms-radio-fake">Низкий</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="12" value="1"  checked/>
+							<span class="rooms-radio-fake">Средний</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="12" value="0.95" />
+							<span class="rooms-radio-fake">Высокий</span>
+						</label>
+					</div>	
+				</div>
+				<!-- // Опыт разработки на языках программирования -->
+
+				<!-- Применение методов разработки ПО -->
+				<div class="calc-section">
+					<h4 class="checkbox-wrapper title-bold section-title">13. Применение методов разработки ПО</h4>
+					<div class="rooms-wrapper">
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="13" value="1.24" />
+							<span class="rooms-radio-fake">Очень низкий</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="13" value="1.1" />
+							<span class="rooms-radio-fake">Низкий</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="13" value="1"  checked/>
+							<span class="rooms-radio-fake">Средний</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="13" value="0.91" />
+							<span class="rooms-radio-fake">Высокий</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="13" value="0.82" />
+							<span class="rooms-radio-fake">Очень высокий</span>
+						</label>
+					</div>
+				</div>
+				<!-- // Применение методов разработки ПО -->
+
+				<!-- Использование инструментария разработки ПО -->
+				<div class="calc-section">
+					<h4 class="checkbox-wrapper title-bold section-title">14. Использование инструментария разработки ПО</h4>
+					<div class="rooms-wrapper">
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="14" value="1.24" />
+							<span class="rooms-radio-fake">Очень низкий</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="14" value="1.1" />
+							<span class="rooms-radio-fake">Низкий</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="14" value="1"  checked/>
+							<span class="rooms-radio-fake">Средний</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="14" value="0.91" />
+							<span class="rooms-radio-fake">Высокий</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="14" value="0.83" />
+							<span class="rooms-radio-fake">Очень высокий</span>
+						</label>
+					</div>
+				</div>
+				<!-- // Использование инструментария разработки ПО -->
+
+				<!-- Требования соблюдения графика разработки -->
+				<div class="calc-section">
+					<h4 class="checkbox-wrapper title-bold section-title">15. Требования соблюдения графика разработки</h4>
+					<div class="rooms-wrapper">
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="15" value="1.23" />
+							<span class="rooms-radio-fake">Очень низкий</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="15" value="1.08" />
+							<span class="rooms-radio-fake">Низкий</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="15" value="1"  checked/>
+							<span class="rooms-radio-fake">Средний</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="15" value="1.04" />
+							<span class="rooms-radio-fake">Высокий</span>
+						</label>
+						<label class="rooms-label" data-name="mobile">
+							<input type="radio" class="rooms-radio-real" name="15" value="1.1" />
+							<span class="rooms-radio-fake">Очень высокий</span>
+						</label>
+					</div>
+				</div>
+				<!-- // Требования соблюдения графика разработки -->
+
+					<!-- Трудоемкость в человеко-месяцах -->
+					<div class="calc-price">
+                        <ul class="calc-price-title">
+						    <li>
+                                <span class="fifi">Трудоемкость<br> в человеко-месяцах:</span>
+							    <span id="total-price1" class="fifi">0</span>
+						    </li>
+                            <!-- <li>
+                                <span class="fifi">Время разработки <br>в месяцах:</span>
+							    <span id="total-price2" class="fifi">0</span>
+						    </li> -->
+                            
+                        </ul>
+					</div>
+					<!-- // Трудоемкость в человеко-месяцах -->
+				</form>
+			</div>
+		</main>
+
+        <script src="js/nain.js"></script>
+
+    </body>
+    </html>

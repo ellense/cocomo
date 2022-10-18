@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Все о COCOMO</title>
+		<link rel="stylesheet" href="css/main.css" />
+		<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,700&display=swap&subset=cyrillic-ext" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header>
+            <img src="img/icons8-калькулятор-64 (1).png" alt="logo" class="logo">
+            
+            <nav>
+                <ul class="navLinks">
+                    
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="basic cocomo.html">Базовый <br>уровень</a></li>
+                    <li><a href="intermediet cocomo.html">Промежуточный <br>уровень</a></li>
+                    <li><a href="Early Design.html">Предварительная<br>оценка</a></li>
+                    <li><a href="Post Architecture.html">Детальная<br>оценка</a></li>     
+                </ul>
+            </nav>
+            <a href="button.html" class="contact"><button>Автор</button></a>
+        </header>
+		<section id="about" class="about">
+			<div class="container">
+				<h1 class="model">О модели COCOMO</h1>
+				<div class="description1">
+					<h3>Что такое COCOMO?</h3>
+					<p>
+						COCOMO (Constructive Cost Model) – это конструктивная модель стоимости, разрабо-танная в начале 80-х годов Барри Боэмом для оценки трудоемкости разработки программ-ных продуктов1. Она основана на статистическом анализе фактических данных по выпол-нению 63 проектов в компании TRW Aerospace, где Барри Боэм был директором отдела исследований программного обеспечения и технологий. Анализировались проекты объе-мом от 2 до 100 тысяч строк кода на языках программирования от ассемблеров до высоко-уровневого языка PL/1, основанные на каскадной модели жизненного цикла разработки ПО.
+					</p>
+					
+					<h2>
+						Модель состоит из иерархии трех уровней:
+					</h2>
+					<ul>
+						<li>
+							<p class="o">
+								Органический (Organic mode) – маленькие команды с хорошим опытом работы и не жесткими
+								требованиями к разработке
+							</p>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<p class="o">
+								Полуразделенный вид (Intermediate / Semi-detached mode) – средние по размеру команды
+								со
+								смешанным опытом разработки и со смешанными требованиями (как жесткими, так и нет).
+							</p>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<p class="o">
+								Встроенный вид (Intered / Embedded mode) – разрабатываются с учетом множества
+								жестких
+								ограничений (по аппаратному, программному, операционному обеспечению и т.д.)
+							</p>
+						</li>
+					</ul>
+				</div>
+				<div class="description2">
+					<h3>Базовый уровень (Basic COCOMO)</h3>
+					<p>
+						Модель этого уровня – двухпараметрическая. В качестве параметров выступают объем программы (число строк кода) и тип проекта.
+					</p>
+					<p>
+						Уравнения базового уровня модели имеют вид:
+					</p>
+					<img src="img/Снимок экрана 2022-10-10 132432.png" class="formyla">
+					<p>где</p>
+					<p> <b>PM</b> (People/Month) – трудоемкость (чел./мес.);</p>
+					<p> <b>TM</b> (Time at Month) – время разработки в календарных месяцах;</p>
+					<p> <b>SIZE</b> – объем программного продукта в тысячах строк исходного текста (Kilo of Source Line of Code – KSLOC).</p>
+					<p class="z"><b>Значения коэффициентов базовой уровня моделиCOCOMO в зависимости от типа проекта</b></p>
+					<img src="img/Снимок экрана 2022-10-10 134249.png" class="formyl">
+					
+					<h3>Промежуточный уровень (Intermediate COCOMO)</h3>
+					<p>
+						На этом уровне базовая модель уточнена за счет ввода дополнительных 15 «атрибутов стоимости» (или факторов затрат).
+					</p>
+					<p>
+						Формула промежуточного уровня модели имеет вид:
+					</p>
+					<img src="img/Снимок экрана 2022-10-10 161936.png" class="formy">
+					<p>где</p>
+					<p> <b>PM</b> – трудоемкость в чел./мес.)</p>
+					<p> <b>EAF</b> – объем программного продукта в тысячах строк исходного текста</p>
+					<p> <b>SIZE</b> – объем программного продукта в тысячах строк исходного текста </p>
+					<p class="z"><b>Значения коэффициентов базовой уровня моделиCOCOMO в зависимости от типа проекта</b></p>
+					<img src="img/Снимок экрана 2022-10-10 162424.png" class="form">
+				</div>
+			</div>
+		</section> 
+
+		<footer class="footer footer-inner">
+			<div class="container">
+				<p class="footer-text"> © Сараева Е.П. <a href="https://vk.com/srvln" target="_blank">страница Вконтакте</a></p>
+			</div>
+		</footer>
+
+	</body>
+</html>

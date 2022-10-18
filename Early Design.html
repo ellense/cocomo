@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Факторы масштаба</title>
+		<link rel="stylesheet" href="css/main.css" />
+		<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,700&display=swap&subset=cyrillic-ext" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header>
+            <img src="img/icons8-калькулятор-64 (1).png" alt="logo" class="logo">
+           
+            <nav>
+                <ul class="navLinks">
+                    
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="basic cocomo.html"> Базовый <br>уровень</a></li>
+                    <li><a href="intermediet cocomo.html">Промежуточный <br>уровень</a></li>
+                    <li><a href="Early Design.html">Предварительная<br>оценка</a></li>
+                    <li><a href="Post Architecture.html">Детальная<br>оценка</a></li>        
+                </ul>
+            </nav>
+            <a href="button.html" class="contact"><button>Автор</button></a>
+        </header>
+        <main class="calc-wrapper">
+            <div class="heading">
+                <h1 class="heading-title">COCOMO II<br>Early Design</h1>
+                <p class="heading-desc">Стадия предварительной оценки трудоемкости программного проекта. Для этой оценки необходимо оценить для проекта уровень семи множителей трудоемкости.</p>
+            </div>
+
+            <!-- строки кода -->
+					<div class="calc-section">
+						<label class="checkbox-wrapper title-bold section-title .section-title--vertical-center">
+							<span class="title__inline">В проекте:</span>
+							<input type="number" min="0" max="200" value="5" step="0.1" id="square-input" class="title__inline input-short" />
+							<span class="title__inline">тыс. строк кода</span>
+						</label>
+						<input type="range" id="square-range" class="range-input" min="0" max="200" value="5" step="0.1" />
+					</div>
+			<!-- // строки кода -->
+
+            <h2>Факторы масштаба</h2>
+
+                    <!-- Прецедентность, наличие опыта аналогичных разработок -->
+					<div class="calc-section">
+						<label class="checkbox-wrapper title-bold section-title"> Прецедентность, наличие опыта аналогичных разработок </label>
+						
+							<label class="radio-wrapper">
+								<input class="radio" type="radio" name="01" value="6.2" />
+								<div class="title-lite">опыт в продукте и платформе отсутствует</div>
+							</label>
+
+							<label class="radio-wrapper">
+								<input class="radio" type="radio" name="01" value="4.96" />
+								<div class="title-lite">продукт и платформа немного знакомы</div>
+							</label>
+
+							<label class="radio-wrapper">
+								<input class="radio" type="radio" name="01" value="3.72"checked />
+								<div class="title-lite">некоторый опыт в продукте и платформе присутствует</div>
+							</label>
+
+							<label class="radio-wrapper">
+								<input class="radio" type="radio" name="01" value="2.48" />
+								<div class="title-lite">продукт и платформа в основном известны</div>
+							</label>
+
+							<label class="radio-wrapper">
+								<input class="radio" type="radio" name="01" value="1.24" />
+								<div class="title-lite">продукт и платформа в большой степени знакомы</div>
+							</label>
+
+							<label class="radio-wrapper">
+								<input class="radio" type="radio" name="01" value="0" />
+								<div class="title-lite">продукт и платформа полностью знакомы</div>
+							</label>
+						
+					</div>
+                    <!-- // Прецедентность, наличие опыта аналогичных разработок -->
+
+                    <!-- Гибкость процесса разработки -->
+                    <div class="calc-section">
+                        <label class="checkbox-wrapper title-bold section-title"> Гибкость процесса разработки </label>
+                        
+                            <label class="radio-wrapper">
+                                <input class="radio" type="radio" name="02" value="5.07" />
+                                <div class="title-lite">процесс строго детерминирован</div>
+                            </label>
+
+                            <label class="radio-wrapper">
+                                <input class="radio" type="radio" name="02" value="4.05" />
+                                <div class="title-lite">допускаются некоторые компромиссы</div>
+                            </label>
+
+                            <label class="radio-wrapper">
+                                <input class="radio" type="radio" name="02" value="3.04"checked />
+                                <div class="title-lite">значительная жесткость процесса</div>
+                            </label>
+
+                            <label class="radio-wrapper">
+                                <input class="radio" type="radio" name="02" value="2.03" />
+                                <div class="title-lite">относительная жесткость процесса</div>
+                            </label>
+
+                            <label class="radio-wrapper">
+                                <input class="radio" type="radio" name="02" value="1.01" />
+                                <div class="title-lite">незначительная жесткость процесса</div>
+                            </label>
+
+                            <label class="radio-wrapper">
+                                <input class="radio" type="radio" name="02" value="0" />
+                                <div class="title-lite">определены только общие цели</div>
+                            </label>
+                        
+                    </div>
+                    <!-- // Гибкость процесса разработки -->
+
+                    <!-- Архитектура и разрешение рисков -->
+                    <div class="calc-section">
+                        <label class="checkbox-wrapper title-bold section-title"> Архитектура и разрешение рисков </label>
+                        
+                            <label class="radio-wrapper">
+                                <input class="radio" type="radio" name="03" value="7.07" />
+                                <div class="title-lite">риски известны/проанализированы на 20%</div>
+                            </label>
+
+                            <label class="radio-wrapper">
+                                <input class="radio" type="radio" name="03" value="5.65" />
+                                <div class="title-lite">риски известны/проанализированы на 40%</div>
+                            </label>
+
+                            <label class="radio-wrapper">
+                                <input class="radio" type="radio" name="03" value="4.24"checked />
+                                <div class="title-lite">риски известны/проанализированы на 60%</div>
+                            </label>
+
+                            <label class="radio-wrapper">
+                                <input class="radio" type="radio" name="03" value="2.83" />
+                                <div class="title-lite">риски известны/проанализированы на 75%</div>
+                            </label>
+
+                            <label class="radio-wrapper">
+                                <input class="radio" type="radio" name="03" value="1.41" />
+                                <div class="title-lite">риски известны/проанализированы на 90%</div>
+                            </label>
+
+                            <label class="radio-wrapper">
+                                <input class="radio" type="radio" name="03" value="0" />
+                                <div class="title-lite">риски разрешены на 100%</div>
+                            </label>
+                        
+                    </div>
+                    <!-- // Архитектура и разрешение рисков -->
+
+                    <!-- Сработанность команды -->
+                    <div class="calc-section">
+                        <label class="checkbox-wrapper title-bold section-title"> Сработанность команды </label>
+                       
+                            <label class="radio-wrapper">
+                                <input class="radio" type="radio" name="04" value="5.48" />
+                                <div class="title-lite">формальные взаимодействия</div>
+                            </label>
+
+                            <label class="radio-wrapper">
+                                <input class="radio" type="radio" name="04" value="4.38" />
+                                <div class="title-lite">тяжелое взаимодействие до некоторой степени</div>
+                            </label>
+
+                            <label class="radio-wrapper">
+                                <input class="radio" type="radio" name="04" value="3.29"checked />
+                                <div class="title-lite">чаще всего коллективная работа</div>
+                            </label>
+
+                            <label class="radio-wrapper">
+                                <input class="radio" type="radio" name="04" value="2.19" />
+                                <div class="title-lite">в основном коллективная работа</div>
+                            </label>
+
+                            <label class="radio-wrapper">
+                                <input class="radio" type="radio" name="04" value="1.1" />
+                                <div class="title-lite">высокая степень взаимодействия</div>
+                            </label>
+
+                            <label class="radio-wrapper">
+                                <input class="radio" type="radio" name="04" value="0" />
+                                <div class="title-lite">полное доверие, взаимозаменяемость и взаимопомощь</div>
+                            </label>
+                        
+                    </div>
+                    <!-- // Сработанность команды -->
+
+                    <!-- Зрелость процессов -->
+                    <div class="calc-section">
+                        <label class="checkbox-wrapper title-bold section-title"> Зрелость процессов </label>
+                        
+                            <label class="radio-wrapper">
+                                <input class="radio" type="radio" name="05" value="7.8" />
+                                <div class="title-lite">СММ Уровень 1 (ниже среднего)</div>
+                            </label>
+
+                            <label class="radio-wrapper">
+                                <input class="radio" type="radio" name="05" value="6.24" />
+                                <div class="title-lite">СММ Уровень 1 (выше среднего)</div>
+                            </label>
+
+                            <label class="radio-wrapper">
+                                <input class="radio" type="radio" name="05" value="4.68"checked />
+                                <div class="title-lite">СММ Уровень 2</div>
+                            </label>
+
+                            <label class="radio-wrapper">
+                                <input class="radio" type="radio" name="05" value="3.12" />
+                                <div class="title-lite">СММ Уровень 3</div>
+                            </label>
+
+                            <label class="radio-wrapper">
+                                <input class="radio" type="radio" name="05" value="1.56" />
+                                <div class="title-lite">СММ Уровень 4</div>
+                            </label>
+
+                            <label class="radio-wrapper">
+                                <input class="radio" type="radio" name="05" value="0" />
+                                <div class="title-lite">CMM Level 5</div>
+                            </label>
+                        
+                    </div>
+                    <!-- // Зрелость процессов -->
+
+            <h2>Множители трудоемкости</h2>
+                    
+            <!-- квалификация персонала -->
+				<div class="calc-section">
+					<h4 class="checkbox-wrapper title-bold section-title">1. Квалификация персонала</h4>
+					<label class="radio-wrapper" data-name="mobile">
+						<input type="radio" class="radio" name="06" value="2.12" />
+						<div class="title-lite">Очень сильно низкий
+                        <span class="note">аналитики и программисты имеют низшую квалификацию, текучесть больше 45%</span>
+                    </div>
+					</label>
+					<label class="radio-wrapper" data-name="mobile">
+						<input type="radio" class="radio" name="06" value="1.62" />
+						<div class="title-lite">Очень низкий</div>
+					</label>
+					<label class="radio-wrapper" data-name="mobile">
+						<input type="radio" class="radio" name="06" value="1.26"  />
+						<div class="title-lite">Низкий</div>
+					</label>
+					<label class="radio-wrapper" data-name="mobile">
+						<input type="radio" class="radio" name="06" value="1" checked/>
+						<div class="title-lite">Средний</div>
+					</label>
+                    <label class="radio-wrapper" data-name="mobile">
+						<input type="radio" class="radio" name="06" value="0.83" />
+						<div class="title-lite"> Высокий</div>
+					</label>
+					<label class="radio-wrapper" data-name="mobile">
+						<input type="radio" class="radio" name="06" value="0.63" />
+						<div class="title-lite">Очень высокий</div>
+					</label>
+					<label class="radio-wrapper" data-name="mobile">
+						<input type="radio" class="radio" name="06" value="0.5" />
+						<div class="title-lite">Критический
+                        <span class="note">аналитики и программисты имеют высшую квалификацию, текучесть меньше 4%</span>
+                    </div>
+					</label>
+				</div>
+				<!-- // квалификация персонала -->
+
+                <!-- опыт персонала -->
+				<div class="calc-section">
+					<h4 class="checkbox-wrapper title-bold section-title">2. Опыт персонала</h4>
+					<label class="radio-wrapper" data-name="mobile">
+						<input type="radio" class="radio" name="07" value="1.59" />
+						<div class="title-lite">Очень сильно низкий
+                        <span class="note">новое приложение, инструменты и платформа</span>
+                    </div>
+					</label>
+					<label class="radio-wrapper" data-name="mobile">
+						<input type="radio" class="radio" name="07" value="1.62" />
+						<div class="title-lite">очень Низкий</div>
+					</label>
+					<label class="radio-wrapper" data-name="mobile">
+						<input type="radio" class="radio" name="07" value="1.22" />
+						<div class="title-lite">Низкий</div>
+					</label>
+                    <label class="radio-wrapper" data-name="mobile">
+						<input type="radio" class="radio" name="07" value="1"  checked/>
+						<div class="title-lite">Средний</div>
+					</label>
+					<label class="radio-wrapper" data-name="mobile">
+						<input type="radio" class="radio" name="07" value="0.87" />
+						<div class="title-lite">Высокий</div>
+					</label>
+					<label class="radio-wrapper" data-name="mobile">
+						<input type="radio" class="radio" name="07" value="0.74" />
+						<div class="title-lite">Очень высокий</div>
+					</label>
+					<label class="radio-wrapper" data-name="mobile">
+						<input type="radio" class="radio" name="07" value="0.62" />
+						<div class="title-lite">Критический
+                        <span class="note">приложение, инструменты и платформа хорошо известны</span>
+                    </div>
+					</label>
+				</div>
+				<!-- // опыт персонала -->
+
+                <!-- Сложность и надежность продукта -->
+				<div class="calc-section">
+					<h4 class="checkbox-wrapper title-bold section-title">3. Сложность и надежность продукта</h4>
+					<label class="radio-wrapper" data-name="mobile">
+						<input type="radio" class="radio" name="08" value="0.49" />
+						<div class="title-lite">Очень сильно низкий
+                        <span class="note">продукт простой, специальных требований по надежности нет, БД маленькая, документация не требуется</span>
+                    </div>
+					</label>
+					<label class="radio-wrapper" data-name="mobile">
+						<input type="radio" class="radio" name="08" value="0.6" />
+						<div class="title-lite">Очень низкий</div>
+					</label>
+					<label class="radio-wrapper" data-name="mobile">
+						<input type="radio" class="radio" name="08" value="0.83"  />
+						<div class="title-lite">Низкий</div>
+					</label>
+                    <label class="radio-wrapper" data-name="mobile">
+						<input type="radio" class="radio" name="08" value="1"  checked/>
+						<div class="title-lite">Средний</div>
+					</label>
+					<label class="radio-wrapper" data-name="mobile">
+						<input type="radio" class="radio" name="08" value="1.33" />
+						<div class="title-lite">Высокий</div>
+					</label>
+					<label class="radio-wrapper" data-name="mobile">
+						<input type="radio" class="radio" name="08" value="1.91" />
+						<div class="title-lite">Очень высокий</div>
+					</label>
+					<label class="radio-wrapper" data-name="mobile">
+						<input type="radio" class="radio" name="08" value="2.72" />
+						<div class="title-lite">Критический
+                        <span class="note">продукт очень сложный, требования по надежности жесткие, БД сверхбольшая, документация требуется в полном объеме</span>
+                    </div>
+					</label>
+				</div>
+				<!-- // Сложность и надежность продукта -->
+
+                <!-- разработка для повторного использования -->
+				<div class="calc-section">
+					<h4 class="checkbox-wrapper title-bold section-title">4. Разработка для повторного использования</h4>
+					
+					<label class="radio-wrapper" data-name="mobile">
+						<input type="radio" class="radio" name="09" value="0.95" />
+						<div class="title-lite">Низкий
+                        <span class="note">не требуется</span>
+                    </div>
+					</label>
+					<label class="radio-wrapper" data-name="mobile">
+						<input type="radio" class="radio" name="09" value="1"  checked/>
+						<div class="title-lite">Средний</div>
+					</label>
+					<label class="radio-wrapper" data-name="mobile">
+						<input type="radio" class="radio" name="09" value="1.07" />
+						<div class="title-lite">Высокий</div>
+					</label>
+					<label class="radio-wrapper" data-name="mobile">
+						<input type="radio" class="radio" name="09" value="1.15" />
+						<div class="title-lite">Очень высокий</div>
+					</label>
+					<label class="radio-wrapper" data-name="mobile">
+						<input type="radio" class="radio" name="09" value="1.24" />
+						<div class="title-lite">Критический
+                        <span class="note">предполагается переиспользование в других продуктах</span>
+                    </div>
+					</label>
+				</div>
+				<!-- // разработка для повторного использования -->
+
+                <!-- сложность платформы разработки -->
+				<div class="calc-section">
+					<h4 class="checkbox-wrapper title-bold section-title">5. Сложность платформы разработки</h4>
+					
+					<label class="radio-wrapper" data-name="mobile">
+						<input type="radio" class="radio" name="10" value="0.87" />
+						<div class="title-lite">Низкий
+                        <span class="note">специальные ограничения по памяти и быстродействию отсутствуют, платформа стабильна</span>
+                    </div>
+					</label>
+					<label class="radio-wrapper" data-name="mobile">
+						<input type="radio" class="radio" name="10" value="1"  checked/>
+						<div class="title-lite">Средний</div>
+					</label>
+					<label class="radio-wrapper" data-name="mobile">
+						<input type="radio" class="radio" name="10" value="1.29" />
+						<div class="title-lite">Высокий</div>
+					</label>
+					<label class="radio-wrapper" data-name="mobile">
+						<input type="radio" class="radio" name="10" value="1.81" />
+						<div class="title-lite">Очень высокий</div>
+					</label>
+					<label class="radio-wrapper" data-name="mobile">
+						<input type="radio" class="radio" name="10" value="2.61" />
+						<div class="title-lite">Критический
+                        <span class="note">жесткие ограничения по памяти и быстродействию, платформа нестабильна</span>
+                    </div>
+					</label>
+				</div>
+				<!-- // сложность платформы разработки -->
+
+                <!-- оборудование -->
+				<div class="calc-section">
+					<h4 class="checkbox-wrapper title-bold section-title">6. Оборудование</h4>
+					<label class="radio-wrapper" data-name="mobile">
+						<input type="radio" class="radio" name="11" value="1.43" />
+						<div class="title-lite">Очень сильно низкий
+                        <span class="note">инструменты простейшие, коммуникации затруднены</span>
+                    </div>
+					</label>
+					<label class="radio-wrapper" data-name="mobile">
+						<input type="radio" class="radio" name="11" value="1.3" />
+						<div class="title-lite">Очень низкий</div>
+					</label>
+                    <label class="radio-wrapper" data-name="mobile">
+						<input type="radio" class="radio" name="11" value="1.1" />
+						<div class="title-lite">Низкий</div>
+					</label>
+					<label class="radio-wrapper" data-name="mobile">
+						<input type="radio" class="radio" name="11" value="1"  checked/>
+						<div class="title-lite">Средний</div>
+					</label>
+					<label class="radio-wrapper" data-name="mobile">
+						<input type="radio" class="radio" name="11" value="0.87" />
+						<div class="title-lite">Высокий</div>
+					</label>
+					<label class="radio-wrapper" data-name="mobile">
+						<input type="radio" class="radio" name="11" value="0.73" />
+						<div class="title-lite">Очень высокий</div>
+					</label>
+					<label class="radio-wrapper" data-name="mobile">
+						<input type="radio" class="radio" name="11" value="1.62" />
+						<div class="title-lite">Критический
+                        <span class="note">интегрированные средства поддержки жизненного цикла, интерактивные мультимедиа коммуникации</span>
+                    </div>
+					</label>
+				</div>
+				<!-- // оборудование -->
+
+                <!-- требуемое выполнение графика работ -->
+				<div class="calc-section">
+					<h4 class="checkbox-wrapper title-bold section-title">7. Требуемое выполнение графика работ</h4>
+					<label class="radio-wrapper" data-name="mobile">
+						<input type="radio" class="radio" name="12" value="1.43" />
+						<div class="title-lite">Очень низкий
+                        <span class="note">75% от номинальной длительности</span>
+                    </div>
+					</label>
+					<label class="radio-wrapper" data-name="mobile">
+						<input type="radio" class="radio" name="12" value="1.14" />
+						<div class="title-lite">Низкий</div>
+					</label>
+					<label class="radio-wrapper" data-name="mobile">
+						<input type="radio" class="radio" name="12" value="1"  checked/>
+						<div class="title-lite">Средний</div>
+					</label>
+					<label class="radio-wrapper" data-name="mobile">
+						<input type="radio" class="radio" name="12" value="1" />
+						<div class="title-lite">Высокий
+                        <span class="note">160% от номинальной длительности</span>
+                    </div>
+					</label>
+					
+				<!-- // требуемое выполнение графика работ -->
+
+ <!-- // Трудоемкость в человеко-месяцах -->
+            <div class="calc-price">
+                <ul class="calc-price-title">
+                    <li>
+                        <span class="fifi">Трудоемкость<br> в человеко-месяцах:</span>
+                        <span id="total-price1" class="fifi">0</span>
+                    </li>
+                    <li>
+                        <span class="fifi">Время разработки <br>в месяцах:</span>
+                        <span id="total-price2" class="fifi">0</span>
+                    </li>
+                    
+                </ul>
+            </div>
+<!-- // Трудоемкость в человеко-месяцах -->
+        </main>
+       
+        <script src="js/kain.js"></script>
+
+    </body>
+    </html>
