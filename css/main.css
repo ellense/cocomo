@@ -39,10 +39,11 @@ header {
 }
 .z {
 	text-align: center;
+	margin-top: 20px;
 }
 .formyla {
 	cursor: pointer;
-	width: 200px;
+	width: 760px;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -52,29 +53,40 @@ header {
 	cursor: pointer;
 	width: 500px;
 	display: block;
-	padding-top: 20px;
+	padding-top: 0;
 	padding-bottom: 30px;
 	margin-left: auto;
 	margin-right: auto;
 }
-.formy {
+/* .formy {
 	cursor: pointer;
-	width: 270px;
+	width: 760px;
 	display: block;
 	padding-top: 20px;
 	padding-bottom: 30px;
 	margin-left: auto;
 	margin-right: auto;
-}
+} */
 .form {
 	cursor: pointer;
 	width: 800px;
 	display: block;
-	padding-top: 20px;
+	padding-top:0;
 	padding-bottom: 30px;
 	margin-left: auto;
 	margin-right: auto;
 }
+/* .formu {
+	cursor: pointer;
+	width: 760px;
+	display: block;
+	padding-top: 20px;
+	padding-bottom: 30px;
+	margin-left: auto;
+	margin-right: auto;
+} */
+
+
 .navLinks {
 	list-style: none;
 
@@ -117,15 +129,23 @@ button:hover {
 	box-shadow: 2px 2px 16px #7796a4;
 
 }
-
-h1,
-h5,
-h6 {
-	padding: 0;
+.model {
+	font-size: 50px;
+	padding-top: 50px;
 	margin: 0;
+	color: #2a323f;
+	text-align: center;
 	text-transform: uppercase;
 }
 
+
+.classh3 {
+	font-size: 35px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	text-align: center;
+	color: #2a323f;
+}
 h3 {
 	font-size: 30px;
 	margin-top: 15px;
@@ -167,13 +187,7 @@ h3 {
 	margin-right: auto;
 	/* background-color: aqua; */
 }
-.model {
-	font-size: 50px;
-	padding-top: 50px;
-	margin: 0;
-	color: #2a323f;
-	text-align: center;
-}
+
 
 p {
     padding: 10px;;
@@ -484,14 +498,24 @@ h4 {
 	color: #2a323f;
 }
 
-.title-lite {
+.title-mite{
 	font-size: 20px;
 	font-weight: 300;
 	color: #2a323f;
 }
+.title-lite {
+	font-size: 20px;
+	font-weight: 300;
+	color: #2a323f;
+	transition: 0.2s;
+}
+
+.title-lite:hover {
+	transform: scale(1.03);
+}
 
 .note {
-	display: block;
+	display: inline-block;
 	font-weight: 300;
 	font-style: italic;
 	padding-top: 10px;
