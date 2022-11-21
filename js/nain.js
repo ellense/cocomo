@@ -41,26 +41,26 @@ squareInput.addEventListener('input', function(){
     squareRange.value = squareInput.value;
 })
 
-function calc(){
-    for(const radio of radioType){
-        if(radio.checked && radio.value=="1"){
-            TM = 2.5 * (PM**0.38);
-            const formatter = new Intl.NumberFormat('ru');
-        totalPriceElement2.innerText = formatter.format(TM);
-        }
-        else if(radio.checked && radio.value === "3"){
-            TM = 2.5 * (PM**0.35);
-            const formatter = new Intl.NumberFormat('ru');
-        totalPriceElement2.innerText = formatter.format(TM);
-            }
-        else if(radio.checked && radio.value === "2"){
-            PM = 2.8 * (parseFloat(squareInput.value)**1.2);
-            TM = 2.5 * (PM**0.32);
-            const formatter = new Intl.NumberFormat('ru');
-        totalPriceElement2.innerText = formatter.format(TM);
-            }
-    }
-}
+// function calc(){
+//     for(const radio of radioType){
+//         if(radio.checked && radio.value=="1"){
+//             TM = 2.5 * (PM**0.38);
+//             const formatter = new Intl.NumberFormat('ru');
+//         totalPriceElement2.innerText = formatter.format(TM);
+//         }
+//         else if(radio.checked && radio.value === "3"){
+//             TM = 2.5 * (PM**0.35);
+//             const formatter = new Intl.NumberFormat('ru');
+//         totalPriceElement2.innerText = formatter.format(TM);
+//             }
+//         else if(radio.checked && radio.value === "2"){
+//             PM = 2.8 * (parseFloat(squareInput.value)**1.2);
+//             TM = 2.5 * (PM**0.32);
+//             const formatter = new Intl.NumberFormat('ru');
+//         totalPriceElement2.innerText = formatter.format(TM);
+//             }
+//     }
+// }
     
     function calculate() {
         let PM = 0;
@@ -292,31 +292,6 @@ function calc(){
             }
         }
 
-        for(const radio of radio08){
-            if (radio.checked){
-                PM = PM * parseFloat(radio.value);
-                for(const radio of radioType){
-                    if(radio.checked && radio.value=="1"){
-                        TM = 2.5 * (PM**0.38);
-                        const formatter = new Intl.NumberFormat('ru');
-                    totalPriceElement2.innerText = formatter.format(TM);
-                    }
-                    else if(radio.checked && radio.value === "3"){
-                        TM = 2.5 * (PM**0.35);
-                        const formatter = new Intl.NumberFormat('ru');
-                    totalPriceElement2.innerText = formatter.format(TM);
-                        }
-                    else if(radio.checked && radio.value === "2"){
-                        TM = 2.5 * (PM**0.32);
-                        const formatter = new Intl.NumberFormat('ru');
-                    totalPriceElement2.innerText = formatter.format(TM);
-                        }
-                }
-                const formatter = new Intl.NumberFormat('ru');
-                totalPriceElement1.innerText = formatter.format(PM);
-            }
-        }
-
         for(const radio of radio09){
             if (radio.checked){
                 PM = PM * parseFloat(radio.value);
@@ -491,6 +466,31 @@ function calc(){
                 totalPriceElement1.innerText = formatter.format(PM);
             }
         }
+
+        // for(const radio of radio15){
+        //     if (radio.checked){
+        //         PM = PM * parseFloat(radio.value);
+        //         for(const radio of radioType){
+        //             if(radio.checked && radio.value=="1"){
+        //                 TM = 2.5 * (PM**0.38);
+        //                 const formatter = new Intl.NumberFormat('ru');
+        //             totalPriceElement2.innerText = formatter.format(TM);
+        //             }
+        //             else if(radio.checked && radio.value === "3"){
+        //                 TM = 2.5 * (PM**0.35);
+        //                 const formatter = new Intl.NumberFormat('ru');
+        //             totalPriceElement2.innerText = formatter.format(TM);
+        //                 }
+        //             else if(radio.checked && radio.value === "2"){
+        //                 TM = 2.5 * (PM**0.32);
+        //                 const formatter = new Intl.NumberFormat('ru');
+        //             totalPriceElement2.innerText = formatter.format(TM);
+        //                 }
+        //         }
+        //         const formatter = new Intl.NumberFormat('ru');
+        //         totalPriceElement1.innerText = formatter.format(PM);
+        //     }
+        // }
     }
     
     
